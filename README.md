@@ -24,7 +24,7 @@ gh repo list | Select-String CreateDummyFiles
 # CD
 cd D:\Github\Projects
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\CreateDummyFiles)){rmdir .\CreateDummyFiles}
+if (Test-Path -Path .\CreateDummyFiles){rm -Recurse -Force .\CreateDummyFiles}
 # クローン実行
 git clone https://github.com/hide104y/CreateDummyFiles.git
 ```
@@ -156,7 +156,7 @@ dotnet publish .\CreateDummyFiles\CreateDummyFiles\CreateDummyFiles.csproj -c Re
 # CD
 cd D:\Github\Projects
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\CreateDummyFiles)){rmdir .\CreateDummyFiles}
+if (Test-Path -Path .\CreateDummyFiles){rm -Recurse -Force .\CreateDummyFiles}
 # クローン実行
 git clone -b dotnet10 https://github.com/hide104y/CreateDummyFiles.git
 ```
